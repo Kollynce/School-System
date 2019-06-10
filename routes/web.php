@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/layouts.dashboard', function () {
+        return view('layouts.dashboard');
+    });
+});
+
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
