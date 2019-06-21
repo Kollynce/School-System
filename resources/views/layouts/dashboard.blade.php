@@ -84,7 +84,7 @@
                 <div class="collapse" id="navbar-examples">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Students List</a>
+                      <a href="/users" class="nav-link">Students List</a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">Attendance</a>
@@ -399,7 +399,7 @@
         </div>
       </nav>
       <!-- Header -->
-      
+      @yield('content')
       
     </div>
   </div>
