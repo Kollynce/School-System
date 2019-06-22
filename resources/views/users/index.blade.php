@@ -16,7 +16,7 @@
                 <h3 class="card-title">{{$user->name}}</h3>
                 <p class="card-text">{{$user->adm}} <br> {{$user->email}} <br> {{$user->course}}</p>
                 <p class="card-text pl-5">
-                  <button class="btn btn-default"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="btn btn-default"  data-toggle="modal" data-target="#createuser"><i class="fas fa-edit"></i> Edit</button>
                   <button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
                 </p>
               </div>
@@ -28,5 +28,6 @@
 
 
     @include('users.create')
+    @include('users.edit')
 
 @endsection
