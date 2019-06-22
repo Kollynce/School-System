@@ -356,7 +356,7 @@
                 <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="media align-items-center">
                     <span class="avatar avatar-sm rounded-circle">
-                      <img alt="Image placeholder" src="/img/theme/team-4.jpg">
+                      <img alt="Image placeholder" src="/image/{{ Auth::user()->image }}">
                     </span>
                     <div class="media-body ml-2 d-none d-lg-block">
                       <span class="mb-0 text-sm  font-weight-bold">{{ Auth::user()->name }}</span>
@@ -400,7 +400,7 @@
       </nav>
       <!-- Header -->
       @yield('content')
-      
+
     </div>
   </div>
   <!-- Argon Scripts -->
@@ -417,6 +417,7 @@
   <script src="/js/argon.min9f1e.js?v=1.1.0"></script>
   <!-- Demo JS - remove this in your project -->
   <script src="/js/demo.min.js"></script>
+  <script src="/js/custom.js"></script>
   <script>
   // Facebook Pixel Code Don't Delete
   ! function(f, b, e, v, n, t, s) {

@@ -64,9 +64,8 @@ class UserController extends Controller
         $users->email = $request->email;
         $users->adm = $request->adm;
         $users->course = $request->course;
+        $users->user_type = $request->user_type;
         $users->password = Hash::make(Input::get('password'));
-        // $users = Input::file('avatar');
-        // $users->move('uploads', $users->getClientOriginalName());
         if ($file = $request->file('avatar')){
             $name = $file ->getClientOriginalName();
             $file->move('image',$name);
@@ -77,7 +76,9 @@ class UserController extends Controller
         $users->save();
         return redirect('/users');
 
-       
+        //dd($users);
+
+
     }
 
     /**
@@ -88,7 +89,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $users = User::findOrFail($id);
+        return $users;
     }
 
     /**
@@ -99,7 +101,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $users = User::findOrFail($id);
+        return view('users.edit', compact('users'));
+
     }
 
     /**
@@ -111,7 +115,31 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users',
+            'adm' => 'unique:users',
+            'user_type' => 'required',
+            'avatar' => 'image|max:2048',
+            'password' => 'required|max:20|min:8'
+         ]);
+
+
+         $users = User::find($id);
+         $users->name = $request->name;
+         $users->email = $request->email;
+         $users->adm = $request->adm;
+         $users->course = $request->course;
+         $users->password = Hash::make(Input::get('password'));
+         if ($file = $request->file('avatar')){
+             $name = $file ->getClientOriginalName();
+             $file->move('image',$name);
+             $users['avatar'] = $name;
+         }
+
+         //dd($users);
+          $users->save();
+          return back();
     }
 
     /**
@@ -122,6 +150,8 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $users = User::find($id);
+        $users->delete();
+        return redirect('/users');
     }
 }

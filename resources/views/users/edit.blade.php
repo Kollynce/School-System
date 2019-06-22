@@ -5,17 +5,18 @@
                 <h3 class="modal-title">Edit User</h3>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-        <form action="{{route('users.store')}}" enctype="multipart/form-data" method="POST">
+        <form id="user-edit" action="#" enctype="multipart/form-data" method="POST">
+            @method('PATCH')
             @csrf
                 <div class="modal-body">
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Enter User Full Name" id="">
+                        <input type="text" name="name" class="form-control" id="name">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="email" class="form-control" placeholder="Enter Employee Email" id="">
+                        <input type="text" name="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="adm" class="form-control" placeholder="BIT/0342/2012" id="">
+                        <input type="text" name="adm" class="form-control" id="adm">
                     </div>
                     <div class="form-group">
                         <div class="custom-file">
@@ -24,7 +25,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="course" class="form-control" placeholder="Enter Course if Applicable" id="">
+                        <input type="text" name="course" class="form-control" id="course">
                     </div>
                     <div class="form-group">
                          {{-- {{Form::select('user_type', ['student' => 'student', 'lecturer' => 'lecturer'], '',['class' => 'form-control','placeholder' => 'Select One'])}} --}}
@@ -38,7 +39,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <input type="submit" class="btn btn-primary" value="Update" name="add" id="">
+                    <input type="submit" class="btn btn-primary" value="Update" name="update" id="">
                 </div>
             </form>
         </div>

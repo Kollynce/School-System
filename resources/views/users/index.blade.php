@@ -16,8 +16,8 @@
                 <h3 class="card-title">{{$user->name}}</h3>
                 <p class="card-text">{{$user->adm}} <br> {{$user->email}} <br> {{$user->course}}</p>
                 <p class="card-text pl-5">
-                  <button class="btn btn-default"  data-toggle="modal" data-target="#createuser"><i class="fas fa-edit"></i> Edit</button>
-                  <button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button>
+                  <button class="user-edit btn btn-default" data-url="{{action('UserController@update',$user['id'])}}" data-toggle="modal" data-target="#edituser"><i class="fas fa-edit"></i> Edit</button>
+                  <button class="user-delete btn btn-danger" data-url="{{action('UserController@destroy',$user['id'])}}" data-toggle="modal" data-target="#removeuser"><i class="fas fa-trash"></i> Remove</button>
                 </p>
               </div>
             </div>
@@ -29,5 +29,6 @@
 
     @include('users.create')
     @include('users.edit')
+    @include('users.delete')
 
 @endsection
