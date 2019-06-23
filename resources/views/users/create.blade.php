@@ -12,7 +12,7 @@
                         <input type="text" name="name" class="form-control" placeholder="Enter User Full Name" id="">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="email" class="form-control" placeholder="Enter Employee Email" id="">
+                        <input type="text" name="email" class="form-control" placeholder="Enter User Email" id="">
                     </div>
                     <div class="form-group">
                         <input type="text" name="adm" class="form-control" placeholder="BIT/0342/2012" id="">
@@ -24,11 +24,14 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="course" class="form-control" placeholder="Enter Course if Applicable" id="">
+                        <select name="course" class="form-control">
+                            <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+                            <option value="Bachelor of Arts International Relations">Bachelor of Arts International Relations</option>
+                            <option value="Bachelor of Science in IT">Bachelor of Science in IT</option>
+                        </select>
                     </div>
                     <div class="form-group">
-                         {{-- {{Form::select('user_type', ['student' => 'student', 'lecturer' => 'lecturer'], '',['class' => 'form-control','placeholder' => 'Select One'])}} --}}
-                         <select name="user_type" class="form-control">
+                        <select name="user_type" class="form-control">
                             <option value="student">student</option>
                             <option value="lecturer">lecturer</option>
                         </select>

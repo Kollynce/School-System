@@ -117,8 +117,8 @@ class UserController extends Controller
     {
         $this->validate($request,[
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users',
-            'adm' => 'unique:users',
+            'email' => "required|email|unique:users,email,$id",
+            'adm' => "unique:users,adm,$id",
             'user_type' => 'required',
             'avatar' => 'image|max:2048',
             'password' => 'required|max:20|min:8'

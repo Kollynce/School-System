@@ -25,7 +25,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="course" class="form-control" id="course">
+                        <select name="course" class="form-control">
+                            <option value="Bachelor of Commerce">Bachelor of Commerce</option>
+                            <option value="Bachelor of Arts International Relations">Bachelor of Arts International Relations</option>
+                            <option value="Bachelor of Science in IT">Bachelor of Science in IT</option>
+                        </select>
                     </div>
                     <div class="form-group">
                          {{-- {{Form::select('user_type', ['student' => 'student', 'lecturer' => 'lecturer'], '',['class' => 'form-control','placeholder' => 'Select One'])}} --}}

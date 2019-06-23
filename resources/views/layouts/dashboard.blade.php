@@ -77,15 +77,29 @@
                 </div>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#users" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                  <i class="fas fa-users text-purple"></i>
+                  <span class="nav-link-text">Users</span>
+                </a>
+                <div class="collapse" id="users">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="/users" class="nav-link">Users List</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Attendance</a>
+                    </li>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
                   <i class="ni ni-single-02 text-orange"></i>
                   <span class="nav-link-text">Student</span>
                 </a>
                 <div class="collapse" id="navbar-examples">
                   <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a href="/users" class="nav-link">Students List</a>
-                    </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">Attendance</a>
                     </li>
@@ -370,10 +384,6 @@
                   <a href="#!" class="dropdown-item">
                     <i class="ni ni-single-02"></i>
                     <span>My profile</span>
-                  </a>
-                  <a href="#!" class="dropdown-item">
-                    <i class="ni ni-settings-gear-65"></i>
-                    <span>Settings</span>
                   </a>
                   <a href="#!" class="dropdown-item">
                     <i class="ni ni-calendar-grid-58"></i>
