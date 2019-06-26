@@ -31,9 +31,16 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <select name="gender" class="form-control">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <select name="user_type" class="form-control">
                             <option value="student">student</option>
                             <option value="lecturer">lecturer</option>
+                            <option value="staff">staff</option>
                         </select>
                     </div>
                     <div class="form-group">

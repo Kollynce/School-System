@@ -61,11 +61,11 @@
             <!-- Nav items -->
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-dashboards">
+                <a class="nav-link active" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
                   <i class="ni ni-shop text-primary"></i>
                   <span class="nav-link-text">Dashboards</span>
                 </a>
-                <div class="collapse show" id="navbar-dashboards">
+                <div class="collapse" id="navbar-dashboards">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
                       <a href="/layouts.dashboard" class="nav-link">Dashboard</a>
@@ -381,7 +381,7 @@
                   <div class="dropdown-header noti-title">
                     <h6 class="text-overflow m-0">Welcome!</h6>
                   </div>
-                  <a href="#!" class="dropdown-item">
+                  <a href="{{url('/profile/')}}" class="dropdown-item">
                     <i class="ni ni-single-02"></i>
                     <span>My profile</span>
                   </a>

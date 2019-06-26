@@ -32,7 +32,12 @@
                         </select>
                     </div>
                     <div class="form-group">
-                         {{-- {{Form::select('user_type', ['student' => 'student', 'lecturer' => 'lecturer'], '',['class' => 'form-control','placeholder' => 'Select One'])}} --}}
+                         <select name="gender" class="form-control">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                          <select name="user_type" class="form-control">
                             <option value="student">student</option>
                             <option value="lecturer">lecturer</option>
