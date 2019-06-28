@@ -33,6 +33,7 @@
                     </div>
                     <div class="form-group">
                          <select name="gender" class="form-control">
+                            <option >Select Gender</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
@@ -44,6 +45,16 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <input type="hidden" name="phone_number" class="form-control" id="phone_number">
+                        <input type="hidden" name="dob" class="form-control" id="dob">
+                        <input type="hidden" name="id_number" class="form-control" id="id_number">
+                        <input type="hidden" name="gudian_name" class="form-control" id="gudian_name">
+                        <input type="hidden" name="gudian_number" class="form-control" id="gudian_number">
+                        <input type="hidden" name="year_joined" class="form-control" id="year_joined">
+                        <input type="hidden" name="current_year" class="form-control" id="current_year">
+                        <input type="hidden" name="county" class="form-control" id="county">
+                        <input type="hidden" name="division" class="form-control" id="division">
+                        <input type="hidden" name="district" class="form-control" id="district">
                         <input type="password" name="password" class="form-control" placeholder="Enter Default Password" id="">
                     </div>
                 </div>

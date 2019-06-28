@@ -40,19 +40,19 @@
 					<div class="col-lg-4">
 						<div class="form-group disabled">
 							<label class="form-control-label" for="input-first-name">Amission No</label>
-							<input type="text" name="adm" id="disabledInput" class="form-control" value="{{Auth::user()->adm}}" id="" disabled>
+							<input type="text" name="adm" id="disabledInput" class="form-control" value="{{Auth::user()->adm}}" id="adm" disabled>
 						</div>
 					</div>
 					<div class="col-lg-5">
 						<div class="form-group disabled">
 							<label class="form-control-label" for="input-last-name">Course</label>
-							<input type="text" name="course" id="disabledInput" class="form-control" value="{{Auth::user()->course}}" id="" disabled>
+							<input type="text" name="course" id="disabledInput" class="form-control" value="{{Auth::user()->course}}" id="course" disabled>
 						</div>
 					</div>
 					<div class="col-lg-3">
 						<div class="form-group disabled">
 							<label class="form-control-label" for="input-first-name">Gender</label>
-							<input type="text" name="adm" id="disabledInput" class="form-control" value="{{Auth::user()->gender}}" id="" disabled>
+							<input type="text" name="gender" id="disabledInput" class="form-control" value="{{Auth::user()->gender}}" id="gender" disabled>
 						</div>
 					</div>
 				</div>

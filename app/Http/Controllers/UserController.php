@@ -118,18 +118,16 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // $this->validate($request,[
-        //     'name' => 'required|max:255',
-        //     'email' => "required|email|unique:users,email,$id",
-        //     'adm' => "unique:users,adm,$id",
-        //     //'user_type' => 'required',
-        //     //'gender' => 'required',
-        //     'id_number' => 'max:8|min:8',
-        //     'phone_number' => 'max:13|min:10',
-        //     'gudian_number' => 'max:13|min:10',
-        //     'avatar' => 'image|max:2048',
-        //     'password' => 'required|max:20|min:8'
-        //  ]);
+        $this->validate($request,[
+            'name' => 'required|max:255',
+            'email' => "required|email|unique:users,email,$id",
+            'adm' => "unique:users,adm,$id",
+            'id_number' => 'max:8|min:8',
+            'phone_number' => 'max:15|min:10',
+            'gudian_number' => 'max:15|min:10',
+            'avatar' => 'image|max:2048',
+            'password' => 'required|max:20|min:8'
+         ]);
 
 
          $users = User::find($id);

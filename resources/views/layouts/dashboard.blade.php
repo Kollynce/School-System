@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
     <!-- Argon CSS -->
     <link rel="stylesheet" href="/css/argon.min9f1e.css?v=1.1.0" type="text/css">
+    <link rel="stylesheet" href="/vendor/sweetalert2/dist/sweetalert2.min.css">
+
+
     <!-- Google Tag Manager -->
     <script>
     (function(w, d, s, l, i) {
@@ -89,7 +92,6 @@
                     <li class="nav-item">
                       <a href="#" class="nav-link">Attendance</a>
                     </li>
-                    </li>
                   </ul>
                 </div>
               </li>
@@ -116,11 +118,27 @@
                 </div>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#unit" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
+                   <i class="ni ni-ruler-pencil text-info"></i>
+                  <span class="nav-link-text">Unit Registration</span>
+                </a>
+                <div class="collapse" id="unit">
+                  <ul class="nav nav-sm flex-column">
+                    <li class="nav-item">
+                      <a href="/units" class="nav-link">Units Setings</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">wait</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              {{-- <li class="nav-item">
                 <a class="nav-link" href="#" role="button" aria-controls="navbar-components">
                   <i class="ni ni-ruler-pencil text-info"></i>
                   <span class="nav-link-text">Unit Registration</span>
                 </a>
-              </li>
+              </li> --}}
               <li class="nav-item">
                 <a class="nav-link" href="#" aria-controls="navbar-forms">
                   <i class="ni ni-credit-card text-pink"></i>
@@ -410,7 +428,6 @@
       </nav>
       <!-- Header -->
       @yield('content')
-
     </div>
   </div>
   <!-- Argon Scripts -->
@@ -423,6 +440,7 @@
   <!-- Optional JS -->
   <script src="/vendor/chart.js/dist/Chart.min.js"></script>
   <script src="/vendor/chart.js/dist/Chart.extension.js"></script>
+  <script src="/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
   <!-- Argon JS -->
   <script src="/js/argon.min9f1e.js?v=1.1.0"></script>
   <!-- Demo JS - remove this in your project -->
