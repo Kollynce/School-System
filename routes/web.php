@@ -26,4 +26,4 @@ Auth::routes();
 Route::resource('/users', 'UserController');
 Route::resource('profile', 'ProfileController');
 Route::resource('units', 'UnitController');
-
+Route::resource('regunits', 'RegUnitController');

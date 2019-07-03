@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Unit;
+Use App\RegUnit;
 use App\User;
-use App\RegUnit;
+use Auth;
 
-class ProfileController extends Controller
+class RegUnitController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +17,11 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        $regunit = RegUnit::all();
-        return view('profile.index', compact('regunit'))->with('users');
+         $unit = Unit::all();
+         $regunit = RegUnit::all();
+        // $user = User::all();
+
+        return view('regunits.index', compact('unit', 'regunit'));
     }
 
     /**
@@ -27,7 +31,8 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        //
+        $unit = Unit::all();
+        return view('regunits.index')->with('unit', $unit);
     }
 
     /**
@@ -38,7 +43,21 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            //'course' => 'required',
+            'unit' => 'required|unique:reg_units,unit',
+            //'year' => 'required',
+            //'user_id' => 'required'
+        ]);
+
+        $regunit = new RegUnit();
+        //$regunit->course = $request->course;
+        $regunit->unit = $request->unit;
+        $regunit->course = auth()->user()->course;
+        $regunit->year = auth()->user()->current_year;
+        $regunit->user_id = auth()->user()->id;
+        $regunit->save();
+        return back();
     }
 
     /**
@@ -60,8 +79,7 @@ class ProfileController extends Controller
      */
     public function edit($id)
     {
-        $users = User::findOrFail($id);
-        return view('profile.index')->with('users');
+        //
     }
 
     /**
@@ -84,6 +102,8 @@ class ProfileController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $regunit = RegUnit::find($id);
+        $regunit->delete();
+        return redirect('/regunits');
     }
 }

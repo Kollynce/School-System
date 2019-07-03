@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
        return $this->avatar;
     }
+
+    public function regunits()
+       {
+           return $this->hasMany('App\RegUnit');
+       }
 }

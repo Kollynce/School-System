@@ -128,7 +128,7 @@
                       <a href="/units" class="nav-link">Units Setings</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">wait</a>
+                      <a href="/regunits" class="nav-link">Registered Units</a>
                     </li>
                   </ul>
                 </div>

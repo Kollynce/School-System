@@ -105,3 +105,11 @@ $('body').on('click', '.unit-delete', function(e){
 
     $('#unit-delete').attr('action', url);
 });
+
+$('body').on('click', '.regunit-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#regunit-delete').attr('action', url);
+});
