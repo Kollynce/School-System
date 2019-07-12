@@ -16,7 +16,7 @@
                         <input type="text" name="email" class="form-control" id="email">
                     </div>
                     <div class="form-group">
-                        <input type="text" name="adm" class="form-control" id="adm">
+                        <input type="text" name="adm" class="form-control" id="admtry">
                     </div>
                     <div class="form-group">
                         <div class="custom-file">

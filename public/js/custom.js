@@ -26,6 +26,7 @@ $('body').on('click', '.user-edit', function(e){
             $('#district').val(response.district);
             $('#division').val(response.division);
             $('#course').val(response.course);
+            $('#admtry').val(response.adm);
         }
     });
 
@@ -112,4 +113,38 @@ $('body').on('click', '.regunit-delete', function(e){
     url = $(this).attr('data-url');
 
     $('#regunit-delete').attr('action', url);
+});
+
+//jrhehe
+$('body').on('click', '.cat1edit', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#cat1-edit').attr('action', url);
+
+    console.log(url);
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data: JSON,
+        success: function(response){
+            $('#student').val(response.student);
+            $('#adm').val(response.adm);
+            $('#unit1').val(response.unit);
+            $('#total').val(response.total);
+            $('#grade').val(response.grade);
+            $('#course').val(response.course);
+        }
+    });
+
+});
+
+$('body').on('click', '.cat1-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#cat1-delete').attr('action', url);
 });

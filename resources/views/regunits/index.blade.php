@@ -32,6 +32,7 @@
 				<tbody>
 					@if(count($regunit) > 0)
 					@foreach($regunit as $item)
+					@if($item->user_id == Auth::user()->id)
 						<tr>
 							<td class="table-user">
 								<b>{{$item->unit}}</b>
@@ -51,6 +52,7 @@
 								</a>
 							</td>
 						</tr>
+					@endif	
 					@endforeach
 					@endif
 				</tbody>

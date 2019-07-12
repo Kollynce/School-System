@@ -27,3 +27,12 @@ Route::resource('/users', 'UserController');
 Route::resource('profile', 'ProfileController');
 Route::resource('units', 'UnitController');
 Route::resource('regunits', 'RegUnitController');
+Route::resource('attendance', 'AttendanceController');
+Route::resource('exams', 'ExamsController');
+Route::resource('cat1', 'Cat1Controller');
+Route::resource('cat2', 'Cat2Controller');
+Route::resource('mainexam', 'MainExamController');
+
+Route::get('calendar.index', function () {
+    return view('calendar.index');
+});

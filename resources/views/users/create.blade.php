@@ -38,7 +38,9 @@
                     </div>
                     <div class="form-group">
                         <select name="user_type" class="form-control">
+                            <option >Selact User Type</option>
                             <option value="student">student</option>
+                            <option value="admin">admin</option>
                             <option value="lecturer">lecturer</option>
                             <option value="staff">staff</option>
                         </select>

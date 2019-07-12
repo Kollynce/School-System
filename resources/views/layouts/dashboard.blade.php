@@ -17,6 +17,7 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="/css/argon.min9f1e.css?v=1.1.0" type="text/css">
     <link rel="stylesheet" href="/vendor/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="/vendor/fullcalendar/dist/fullcalendar.min.css">
 
 
     <!-- Google Tag Manager -->
@@ -89,9 +90,6 @@
                     <li class="nav-item">
                       <a href="/users" class="nav-link">Users List</a>
                     </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Attendance</a>
-                    </li>
                   </ul>
                 </div>
               </li>
@@ -103,7 +101,7 @@
                 <div class="collapse" id="navbar-examples">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Attendance</a>
+                      <a href="/attendance" class="nav-link">Attendance</a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">Assignments</a>
@@ -171,13 +169,13 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/exams">
                   <i class="ni ni-books text-info"></i>
                   <span class="nav-link-text">Exams</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/calendar.index">
                   <i class="ni ni-calendar-grid-58 text-red"></i>
                   <span class="nav-link-text">Calendar</span>
                 </a>
@@ -441,6 +439,10 @@
   <script src="/vendor/chart.js/dist/Chart.min.js"></script>
   <script src="/vendor/chart.js/dist/Chart.extension.js"></script>
   <script src="/vendor/sweetalert2/dist/sweetalert2.min.js"></script>
+  <script src="/vendor/moment/min/moment.min.js"></script>
+  <script src="/vendor/fullcalendar/dist/fullcalendar.min.js"></script>
+
+
   <!-- Argon JS -->
   <script src="/js/argon.min9f1e.js?v=1.1.0"></script>
   <!-- Demo JS - remove this in your project -->
