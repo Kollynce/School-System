@@ -33,6 +33,14 @@ Route::resource('cat1', 'Cat1Controller');
 Route::resource('cat2', 'Cat2Controller');
 Route::resource('mainexam', 'MainExamController');
 
+Route::get('downloads/{id}',[
+    'as' => 'download.file', 'uses' => 'DownloadController@downloadFile']);
+Route::resource('downloads', 'DownloadController');
+
+Route::get('assignments/{id}',[
+    'as' => 'assignment.file', 'uses' => 'AssignmentController@assignmentFile']);
+Route::resource('assignments', 'AssignmentController');
+
 Route::get('calendar.index', function () {
     return view('calendar.index');
 });

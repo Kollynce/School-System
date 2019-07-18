@@ -104,7 +104,7 @@
                       <a href="/attendance" class="nav-link">Attendance</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Assignments</a>
+                      <a href="/assignments" class="nav-link">Assignments</a>
                     </li>
                     <li class="nav-item">
                       <a href="#" class="nav-link">Queries</a>
@@ -163,7 +163,7 @@
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/downloads">
                   <i class="ni ni-cloud-download-95 text-green"></i>
                   <span class="nav-link-text">Downloads</span>
                 </a>

@@ -148,3 +148,42 @@ $('body').on('click', '.cat1-delete', function(e){
 
     $('#cat1-delete').attr('action', url);
 });
+
+
+$('body').on('click', '.download-edit', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#edit-download').attr('action', url);
+
+    console.log(url);
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data: JSON,
+        success: function(response){
+            $('#title-edit').val(response.title);
+            $('#description-edit').val(response.description);
+            $('#owner-edit').val(response.owner);
+        }
+    });
+
+});
+
+$('body').on('click', '.download-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#download-delete').attr('action', url);
+});
+
+$('body').on('click', '.assignment-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#assignment-delete').attr('action', url);
+});
