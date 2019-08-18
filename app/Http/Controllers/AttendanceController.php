@@ -39,7 +39,23 @@ class AttendanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate( $request, [
+            'student' => 'required',
+            'course' => 'required',
+            'unit' => 'required'
+        ]);
+
+        $attendance = new Attendance();
+        $attendance->student = $request->student;
+        $attendance->course = $request->course;
+        $attendance->unit = $request->unit;
+        $attendance->monday = 'Not Attended';
+        $attendance->tuesday = 'Not Attended';
+        $attendance->wednesday = 'Not Attended';
+        $attendance->thursday = 'Not Attended';
+        $attendance->friday = 'Not Attended';
+        $attendance->save();
+        return back();
     }
 
     /**
@@ -50,7 +66,8 @@ class AttendanceController extends Controller
      */
     public function show($id)
     {
-        //
+        $attendance = Attendance::findOrFail($id);
+        return $attendance;
     }
 
     /**
@@ -73,7 +90,21 @@ class AttendanceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate( $request, [
+            'course' => 'required',
+            'unit' => 'required',
+        ]);
+
+        $attendance = Attendance::find($id);
+        $attendance->course = $request->course;
+        $attendance->unit = $request->unit;
+        $attendance->monday = $request->monday;
+        $attendance->tuesday = $request->tuesday;
+        $attendance->wednesday = $request->wednesday;
+        $attendance->thursday = $request->thursday;
+        $attendance->friday = $request->friday;
+        $attendance->save();
+        return back();
     }
 
     /**
@@ -84,6 +115,8 @@ class AttendanceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $attendance = Attendance::find($id);
+        $attendance->delete();
+        return redirect('attendance');
     }
 }

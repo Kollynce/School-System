@@ -19,7 +19,7 @@
         <!--------------------------------------- nav ------------------------------------>
         <nav id="navbar-main" class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="pages/dashboards/dashboard.html">
+                <a class="navbar-brand" href="#">
                     <img src="{{ asset('img/PIU-Logo.jpg') }}">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse"
@@ -30,7 +30,7 @@
                     <div class="navbar-collapse-header">
                         <div class="row">
                             <div class="col-6 collapse-brand">
-                                <a href="pages/dashboards/dashboard.html">
+                                <a href="/">
                                     <img src="assets/img/brand/blue.png">
                                 </a>
                             </div>
@@ -104,17 +104,13 @@
                                         <i class="ni ni-single-02"></i>
                                         <span>My profile</span>
                                       </a>
-                                      <a href="/layouts.dashboard" class="dropdown-item">
+                                      <a href="/dashboard" class="dropdown-item">
                                         <i class="ni ni-shop"></i>
                                         <span>Dashboard</span>
                                       </a>
-                                      <a href="#!" class="dropdown-item">
+                                      <a href="/calendar.index" class="dropdown-item">
                                         <i class="ni ni-calendar-grid-58"></i>
                                         <span>Activity</span>
-                                      </a>
-                                      <a href="#!" class="dropdown-item">
-                                        <i class="ni ni-support-16"></i>
-                                        <span>Support</span>
                                       </a>
                                       <div class="dropdown-divider"></div>
                                       <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();

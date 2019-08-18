@@ -32,6 +32,7 @@ Route::resource('exams', 'ExamsController');
 Route::resource('cat1', 'Cat1Controller');
 Route::resource('cat2', 'Cat2Controller');
 Route::resource('mainexam', 'MainExamController');
+Route::resource('dashboard', 'DashboardController');
 
 Route::get('downloads/{id}',[
     'as' => 'download.file', 'uses' => 'DownloadController@downloadFile']);

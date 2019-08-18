@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\ExamTable;
+use App\Dashboard;
+use Auth;
 
-class ExamsController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,8 @@ class ExamsController extends Controller
      */
     public function index()
     {
-        $table = ExamTable::all();
-        return view('exams.index')->with('table', $table);
+        $event = Dashboard::all();
+        return view('dashboard.index')->with('event', $event);
     }
 
     /**
@@ -37,22 +38,23 @@ class ExamsController extends Controller
     public function store(Request $request)
     {
         $this->validate( $request, [
-            'exam' => 'required',
-            'course' => 'required',
-            'unit' => 'required',
-            'day' => 'required',
-            'time' => 'required',
-            'room' => 'required'
+            'title' => 'required',
+            'event_desc' => 'required',
+            'event_pic' => 'image|max:2048'
         ]);
 
-        $table = new ExamTable();
-        $table->exam = $request->exam;
-        $table->course = $request->course;
-        $table->unit = $request->unit;
-        $table->day = $request->day;
-        $table->time = $request->time;
-        $table->room = $request->room;
-        $table->save();
+        $event = new Dashboard();
+        $event->title = $request->title;
+        $event->event_desc = $request->event_desc;
+        $event->owner = Auth::user()->name;
+        $event->owner_pic = Auth::user()->avatar;
+        if ($file = $request->file('event_pic')){
+            $name = $file ->getClientOriginalName();
+            $file->move('image',$name);
+            $event['event_pic'] = $name;
+        }
+
+        $event->save();
         return back();
     }
 
@@ -64,8 +66,7 @@ class ExamsController extends Controller
      */
     public function show($id)
     {
-        $table = ExamTable::findOrFail($id);
-        return $table;
+        //
     }
 
     /**
@@ -88,26 +89,7 @@ class ExamsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate( $request, [
-            'exam' => 'required',
-            'course' => 'required',
-            'unit' => 'required',
-            'day' => 'required',
-            'time' => 'required',
-            'room' => 'required'
-        ]);
-
-        $table = ExamTable::find($id);
-        $table->exam = $request->exam;
-        $table->course = $request->course;
-        $table->unit = $request->unit;
-        $table->day = $request->day;
-        $table->time = $request->time;
-        $table->room = $request->room;
-
-        //return $table;
-        $table->save();
-        return back();
+        //
     }
 
     /**
@@ -118,8 +100,6 @@ class ExamsController extends Controller
      */
     public function destroy($id)
     {
-        $table = ExamTable::find($id);
-        $table->delete();
-        return redirect('/exams');
+        //
     }
 }

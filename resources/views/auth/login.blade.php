@@ -18,11 +18,11 @@
                 <div class="modal-body p-0">
                     <div class="card bg-secondary border-0 mb-0">
                         <div class="card-header bg-transparent pb-5">
-                            <div class="text-muted text-center"><h4>Sign in with</h4></div>
+                            <div class="text-muted text-center"><h4>SIGN IN</h4></div>
                         </div>
                         <div class="card-body px-lg-5 py-lg-5">
                             <div class="text-center text-muted mb-4">
-                                <small>Or sign in with credentials</small>
+                                <small>Sign in with Credentials</small>
                             </div>
                             <form role="form" method="POST" action="{{ route('login') }}">
                                 @csrf

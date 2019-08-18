@@ -45,7 +45,7 @@
       <div class="scrollbar-inner">
         <!-- Brand -->
         <div class="sidenav-header d-flex align-items-center">
-          <a class="navbar-brand" href="dashboard.html">
+          <a class="navbar-brand" href="/">
             <img src="/img/brand/blue.png" class="navbar-brand-img" alt="...">
           </a>
           <div class="ml-auto">
@@ -72,7 +72,7 @@
                 <div class="collapse" id="navbar-dashboards">
                   <ul class="nav nav-sm flex-column">
                     <li class="nav-item">
-                      <a href="/layouts.dashboard" class="nav-link">Dashboard</a>
+                      <a href="/dashboard" class="nav-link">Dashboard</a>
                     </li>
                     <li class="nav-item">
                       <a href="/" class="nav-link">Home</a>
@@ -131,36 +131,11 @@
                   </ul>
                 </div>
               </li>
-              {{-- <li class="nav-item">
-                <a class="nav-link" href="#" role="button" aria-controls="navbar-components">
-                  <i class="ni ni-ruler-pencil text-info"></i>
-                  <span class="nav-link-text">Unit Registration</span>
-                </a>
-              </li> --}}
               <li class="nav-item">
                 <a class="nav-link" href="#" aria-controls="navbar-forms">
                   <i class="ni ni-credit-card text-pink"></i>
                   <span class="nav-link-text">Finacial Reports</span>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
-                  <i class="ni ni-align-left-2 text-default"></i>
-                  <span class="nav-link-text">Time Tables</span>
-                </a>
-                <div class="collapse" id="navbar-tables">
-                  <ul class="nav nav-sm flex-column">
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Tables</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Sortable</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="#" class="nav-link">Datatables</a>
-                    </li>
-                  </ul>
-                </div>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/downloads">
@@ -401,13 +376,13 @@
                     <i class="ni ni-single-02"></i>
                     <span>My profile</span>
                   </a>
-                  <a href="#!" class="dropdown-item">
+                  <a href="/calendar.index" class="dropdown-item">
                     <i class="ni ni-calendar-grid-58"></i>
                     <span>Activity</span>
                   </a>
-                  <a href="#!" class="dropdown-item">
+                  {{-- <a href="#!" class="dropdown-item">
                     <i class="ni ni-support-16"></i>
-                    <span>Support</span>
+                    <span>Support</span> --}}
                   </a>
                   <div class="dropdown-divider"></div>
                   <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault();

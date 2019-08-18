@@ -14,7 +14,7 @@
 					<!-- Title -->
 					<div class="row">
 						<h5 class="h3 mb-0 col-md-10">{{$item->title}}</h5>
-						<a class="download-delete table-action table-action-delete col-md-1 float-right" data-toggle="modal" data-target="#removefile" data-url="{{action('DownloadController@destroy',$item['id'])}}">
+						<a href="#" class="download-delete table-action table-action-delete col-md-1 float-right" data-toggle="modal" data-target="#removefile" data-url="{{action('DownloadController@destroy',$item['id'])}}">
 							<i class="fas fa-trash"></i>
 						</a>
 					</div>

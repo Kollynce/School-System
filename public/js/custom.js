@@ -187,3 +187,62 @@ $('body').on('click', '.assignment-delete', function(e){
 
     $('#assignment-delete').attr('action', url);
 });
+
+$('body').on('click', '.attendance-edit', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#edit-attendance').attr('action', url);
+
+    console.log(url);
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data: JSON,
+        success: function(response){
+            $('#student').val(response.student);
+            $('#unit-edit').val(response.unit);
+        }
+    });
+
+});
+
+$('body').on('click', '.attendance-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#attendance-delete').attr('action', url);
+});
+
+$('body').on('click', '.table-edit', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#edit-examtable').attr('action', url);
+
+    console.log(url);
+
+    $.ajax({
+        url: url,
+        method: 'GET',
+        data: JSON,
+        success: function(response){
+            $('#unit-table').val(response.unit);
+            $('#time').val(response.time);
+            $('#room').val(response.room);
+        }
+    });
+
+});
+
+$('body').on('click', '.table-delete', function(e){
+    e.preventDefault();
+
+    url = $(this).attr('data-url');
+
+    $('#table-delete').attr('action', url);
+});
